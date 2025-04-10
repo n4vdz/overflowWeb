@@ -26,7 +26,7 @@ function News() {
       </div>
 
       <div className="space-y-6">
-        {newsData.map((newsItem,index) => (
+        {newsData&&newsData.map((newsItem,index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg p-6">
             <div className="flex justify-between items-center">
               <div className="w-full md:w-1/2">
