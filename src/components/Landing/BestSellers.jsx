@@ -23,8 +23,8 @@ function BestSellers() {
   };
 
   return (
-    <div className="text-center py-8">
-      <h2 className="text-2xl font-bold text-blue-500 mb-6">
+    <div className="z-10 text-center py-8">
+      <h2 className="text-6xl font-peyda font-black text-deep-blue mb-28">
         پرفروش‌ترین دوره‌ها
       </h2>
       <div className="flex flex-wrap justify-center gap-6">
