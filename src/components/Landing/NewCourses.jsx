@@ -25,8 +25,8 @@ function NewCourses() {
   };
 
   return (
-    <div className="text-center py-8">
-      <h2 className="text-2xl font-bold text-blue-500 mb-6">جدید ترین دوره ها</h2>
+    <div className="border-2 border-amber-700 text-center py-8">
+      <h2 className="text-4xl font-bold text-[#267dff] mb-6">جدید ترین دوره ها</h2>
 
       <div className="flex flex-wrap justify-center gap-6">
         {newCoursesData&&newCoursesData.map((item, index) => (
