@@ -1,14 +1,14 @@
 import React from "react";
 import HeroImg from "../../assets/landing/heroimg.png";
-// import buble from "../../assets/landing/buble.png"
+import bgShape from "../../assets/landing/Path1.png";
 import search from "../../assets/landing/search.png";
 
 function Hero() {
   return (
-    <section className="flex items-center justify-between px-30 py-16 dark:bg-gray-900">
+    <section className=" flex items-center justify-between px-30 py-16 dark:bg-gray-900">
 
       {/* Image Section */}
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div className="z-10 w-full md:w-1/2 flex justify-center">
         <img
           src={HeroImg}
           alt="آموزش"
@@ -16,7 +16,9 @@ function Hero() {
         />
       </div>
       {/* right section */}
-      <div className="w-full flex-shrink-2 flex  flex-col justify-start items-end md:w-1/2  space-y-6">
+      <div className=" w-full flex-shrink-2 flex  flex-col justify-start items-end md:w-1/2  space-y-6">
+      <img src={bgShape} alt="Background Shape" className="absolute z-0 opacity-95 top-0 left-0 w-full h-full object-cover " />
+
         <h1 className=" text-[59px]  font-extrabold font-peyda  text-deep-blue dark:text-white">
           دنبال چی می‌گردی؟
         </h1>
