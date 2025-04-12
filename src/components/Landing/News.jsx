@@ -9,35 +9,34 @@ function News() {
   const URL =
     "/News?PageNumber=1&RowsOfPage=4&SortingCol=InsertDate&SortType=DESC";
 
-  const [newsData, setNewsData] = useState([]);
-
+  const [newsData, setNewsData] = useState([""]);
   useEffect(() => {
     getNews();
   }, []);
-
   const getNews = async () => {
     const response = await getApi(URL, "news");
-    setNewsData(response.news);
-    console.log("newsres",response);
+    setNewsData(response);
+    console.log(response);
   };
 
   return (
-    <div className="relative flex flex-col container mx-auto py-10">
+    <div className=" relative flex flex-col container mx-auto py-10">
       <img
         src={newsBack}
-        alt="Background"
-        className="absolute z-0 w-[1511px] h-[1511px] opacity-98 top-0 -left-68"
+        alt=""
+        className="absolute z-0  w-[1511px] h-[1511px] opacity-98 top-0 -left-68 "
       />
       <h2 className="relative mb-14 text-5xl z-10 font-peyda font-black text-deep-blue">
         آخرین اخبار
       </h2>
-      <section className="justify-center flex overflow-hidden relative z-10">
-        <div className="w-264 h-119 relative items-center flex flex-col space-y-6">
-          <div className="absolute bg-white opacity-80 w-264 h-99 rounded-sm shadow-[0px_5px_27.5px_rgba(0,0,0,0.16)] "></div>
+      <section className=" justify-center flex overflow-hidden relative z-10">
+        <div className=" w-264 h-119 relative items-center flex flex-col space-y-6">
+          <div className="absolute   bg-white opacity-80 w-264 h-99 rounded-sm  shadow-[0px_5px_27.5px_rgba(0,0,0,0.16)] "></div>
+
           {newsData &&
             newsData.map((newsItem, index) => (
-              <div key={index} className="mt-11 mr-16 z-10">
-                <div className="bg-white w-264 h-99 rounded-sm shadow-[0px_5px_27.5px_rgba(0,0,0,0.16)] py-8 px-11 flex flex-col md:flex-row-reverse gap-6 text-right">
+              <div key={index} className="mt-11 mr-16 z-10 ">
+                <div className="bg-white w-264 h-99 rounded-sm  shadow-[0px_5px_27.5px_rgba(0,0,0,0.16)] py-8 px-11 flex flex-col md:flex-row-reverse gap-6 text-right">
                   {/* Image */}
                   <div className="md:w-1/3 w-full flex justify-center">
                     <SmartImage
@@ -56,24 +55,21 @@ function News() {
                     <p className="text-gray-600 text-2xl font-vazir leading-relaxed">
                       {newsItem.miniDescribe}
                     </p>
-                    <button className="bg-blue-500 text-white py-2 px-4 rounded-md">
-                      مشاهده بیشتر
-                    </button>
                   </div>
                 </div>
               </div>
             ))}
         </div>
-      </section>
-      <div className="flex items-center mb-6">
-        <div className="flex flex-col items-center ml-8 space-x-2">
-          <img src={up} className="w-4 hover:cursor-pointer" />
-          <div className="font-vazir my-2 text-2xl font-bold text-gray-700">
-            1 / 4
+        <div className="flex items-center  mb-6">
+          <div className="flex flex-col items-center ml-8 space-x-2">
+            <img src={up} className="w-4 hover:cursor-pointer" />
+            <div className="font-vazir my-2 text-2xl font-bold text-gray-700 ">
+              1 / 4
+            </div>
+            <img src={up} className="rotate-180 w-4 hover:cursor-pointer " />
           </div>
-          <img src={up} className="rotate-180 w-4 hover:cursor-pointer " />
         </div>
-      </div>
+      </section>
       <div className=" text-left w-full">
         <button className="text-gray-700 font-bold font-vazir text-2xl hover:cursor-pointer self-start">
           مشاهده همه اخبار
