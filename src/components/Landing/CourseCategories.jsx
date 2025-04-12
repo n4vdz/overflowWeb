@@ -26,11 +26,11 @@ function CourseCategories() {
   };
 
   return (
-    <div className="max-w-[1641px] z-10  text-center py-8">
+    <div className="max-w-[1641px] z-10 flex flex-col mx-auto py-8 mb-80">
       <h2 className="text-5xl font-peyda font-black text-deep-blue mb-28"> دسته بندی </h2>
 
-      <div className="flex justify-center gap-10">
-        {newCoursesData&&newCoursesData.map((item, index) => (
+      <div className="flex flex-wrap justify-center gap-12">
+        {newCoursesData&&newCoursesData.slice(0,4).map((item, index) => (
           <SmallCard
             item={item}
             index={index}

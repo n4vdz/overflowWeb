@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getApi } from "../../core/services/api/getApi";
-import newsBack from "../../assets/landing/Path1.png";
+import bubbleBack from "../../assets/landing/bubbleBack.png";
 import newsDef from "../../assets/News/NewsDef.png";
 import SmartImage from "../Common/SmartImage";
 import up from "../../assets/News/up.png";
+import newsPath from "../../assets/landing/path2.png";
 
 function News() {
   const URL =
@@ -16,16 +17,23 @@ function News() {
   const getNews = async () => {
     const response = await getApi(URL, "news");
     setNewsData(response);
-    console.log(response);
+    // console.log(response);
   };
 
   return (
     <div className=" relative flex flex-col container mx-auto py-10">
-      <img
-        src={newsBack}
-        alt=""
-        className="absolute z-0  w-[1511px] h-[1511px] opacity-98 top-0 -left-68 "
-      />
+      <div className=" z-0">
+        <img
+          src={bubbleBack}
+          alt=""
+          className="absolute w-[1511px] h-[1511px] opacity-98 -top-168 -left-190 "
+        />
+        <img
+          src={newsPath}
+          alt=""
+          className="absolute w-[809px] h-[774px] opacity-98 -top-10 -left-65 "
+        />
+      </div>
       <h2 className="relative mb-14 text-5xl z-10 font-peyda font-black text-deep-blue">
         آخرین اخبار
       </h2>

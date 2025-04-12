@@ -25,8 +25,8 @@ function NewCourses() {
   };
 
   return (
-    <div className="max-w-[1641px] z-10  text-center py-8">
-      <h2 className="text-6xl font-peyda font-black text-[#267dff] mb-28">جدید ترین دوره ها</h2>
+    <div className="flex self-center flex-col max-w-[1641px] z-10  text-center my-24 py-8">
+      <h2 className="text-5xl font-peyda font-black text-[#267dff] mb-28">جدید ترین دوره ها</h2>
 
       <div className="flex justify-between gap-6">
         {newCoursesData&&newCoursesData.map((item, index) => (
