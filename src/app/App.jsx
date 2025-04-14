@@ -6,8 +6,7 @@ import { Courses } from "../pages/Courses/Courses.jsx";
 import { Register } from "../components/Register/Register.jsx";
 import { Registerlvl3 } from "../components/Register/Registerlvl3.jsx";
 import { Registerlvl2 } from "../components/Register/Registerlvl2.jsx";
-
-
+import News from "../pages/News/News.jsx";
 
 function App() {
   const publicRoutes = [
@@ -38,7 +37,11 @@ function App() {
         {
           path: "/Courses/:id",
           element: <Courses />,
-        }
+        },
+        {
+          path: "/News/",
+          element: <News />,
+        },
       ],
     },
   ];
