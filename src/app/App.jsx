@@ -10,6 +10,8 @@ import { Panel } from "../components/Panel/Panel.jsx";
 import { AllCourse } from "../pages/Courses/AllCourses.jsx";
 import News from "../pages/News/News.jsx";
 
+
+
 function App() {
   const publicRoutes = [
     {
@@ -37,17 +39,16 @@ function App() {
           element: <Courses />,
         },
         {
-          path: "/Panel",
-          element: <Panel />,
-        },
-        {
           path: "/News",
           element: <News />,
         },
         {
+          path: "/Panel",
+          element: <Panel />,
+        },{
           path: "/allcourses",
-          element: <AllCourse />,
-        },
+          element : <AllCourse/>
+        }
       ],
     },
   ];
